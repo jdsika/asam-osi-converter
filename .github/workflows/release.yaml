@@ -139,7 +139,7 @@ jobs:
       - name: Create a Pull Request to update the changelog file
         uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           commit-message: "docs: update CHANGELOG for release"
           branch: "update-changelog-${{ env.version }}"
           title: "Update CHANGELOG for new release ${{ env.version }}"
